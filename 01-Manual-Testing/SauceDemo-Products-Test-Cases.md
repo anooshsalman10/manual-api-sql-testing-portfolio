@@ -152,10 +152,35 @@
 | Actual Result | The cart was empty after the products were removed. |
 | Status | PASS |
 
+## TC-31: Verify Cart Persists When Checkout Is Cancelled
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-31 |
+| Scenario | Verify that the cart retains its product when checkout is cancelled |
+| Preconditions | User is logged in and Sauce Labs Backpack is in the cart |
+| Test Steps | 1. Open the cart. 2. Click Checkout. 3. Enter valid customer information. 4. Click Continue. 5. On the Checkout: Overview page, click Cancel. |
+| Expected Result | The user returns to the Products page, and the selected product remains in the cart. |
+| Actual Result | After clicking Cancel, the product remained in the cart. |
+| Status | PASS |
+
+## TC-32: Verify Cart Persists After Navigating Away and Returning
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-32 |
+| Scenario | Verify that cart contents persist when navigating away from and returning to the cart page |
+| Preconditions | User is logged in and Sauce Labs Backpack is in the cart |
+| Test Steps | 1. Open the cart and verify that Sauce Labs Backpack is listed. 2. Click Continue Shopping. 3. Open the cart again. |
+| Expected Result | Sauce Labs Backpack remains in the cart. |
+| Actual Result | The product was still present after navigating away from the cart page and reopening it. |
+| Status | PASS |
+
+
 ## Test Summary
 
-- **Total test cases executed:** 11
-- **Passed:** 11
+- **Total test cases executed:** 13
+- **Passed:** 13
 - **Failed:** 0
 
 *These results reflect personal practice testing on the public SauceDemo demo application, not professional QA employment.*
