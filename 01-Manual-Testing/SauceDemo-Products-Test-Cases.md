@@ -86,11 +86,80 @@
 | Actual Result | Products appeared in ascending price order after selecting Price (low to high). |
 | Status | PASS |
 
+
+## TC-17: Verify a Product Can Be Added to the Cart
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-17 |
+| Scenario | Verify that a user can add a product to the cart |
+| Preconditions | User is logged in and on the Products page |
+| Test Data | Product: Sauce Labs Backpack |
+| Steps | 1. Locate Sauce Labs Backpack. 2. Click Add to cart. 3. Check the product button. |
+| Expected Result | The product is added to the cart, and its button changes to Remove. |
+| Actual Result | The button changed to Remove after adding the product. The product could also be removed. |
+| Status | PASS |
+
+## TC-18: Verify the Cart Badge Updates After Adding a Product
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-18 |
+| Scenario | Verify that the cart badge displays the correct item count |
+| Preconditions | User is logged in and the cart is empty |
+| Test Data | Product: Sauce Labs Backpack |
+| Steps | 1. Add Sauce Labs Backpack to the cart. 2. Observe the cart badge. |
+| Expected Result | The cart badge displays 1 after one product is added. |
+| Actual Result | The cart badge updated to display the item count after adding the product. |
+| Status | PASS |
+
+## TC-19: Verify the Correct Product Appears in the Cart
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-19 |
+| Scenario | Verify that the selected product appears correctly in the cart |
+| Preconditions | User is logged in and a product has been added to the cart |
+| Test Data | Product: Sauce Labs Backpack |
+| Steps | 1. Add Sauce Labs Backpack to the cart. 2. Open the cart. 3. Verify the product name, price, and quantity. |
+| Expected Result | The cart displays Sauce Labs Backpack with its correct price and quantity of 1. |
+| Actual Result | The product name, price, and quantity were displayed in the cart. |
+| Status | PASS |
+
+## TC-20: Verify a Product Can Be Removed from the Products Page
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-20 |
+| Scenario | Verify that a user can remove a product from the cart |
+| Preconditions | User is logged in and Sauce Labs Backpack has been added to the cart |
+| Test Data | Product: Sauce Labs Backpack |
+| Steps | 1. Open the cart. 2. Remove the product. 3. Click Continue Shopping. 4. Check the product button on the Products page. |
+| Expected Result | The product is removed from the cart, the cart badge updates, and the product button returns to Add to cart. |
+| Actual Result | The cart badge disappeared after removal, and the product button displayed Add to cart after returning to the Products page. |
+| Status | PASS |
+
+## TC-21: Verify the Cart Is Empty After Removing All Products
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-21 |
+| Scenario | Verify that the cart displays no products after all products are removed |
+| Preconditions | User is logged in and all products have been removed from the cart |
+| Test Data | Empty shopping cart |
+| Steps | 1. Remove all products from the cart. 2. Open the cart. 3. Check the cart contents and badge. |
+| Expected Result | No products are listed in the cart, and the cart badge does not display an item count. |
+| Actual Result | The cart was empty after the products were removed. |
+| Status | PASS |
+
 ## Test Summary
 
-- **Total test cases executed:** 6
-- **Passed:** 6
+- **Total test cases executed:** 11
+- **Passed:** 11
 - **Failed:** 0
 
 *These results reflect personal practice testing on the public SauceDemo demo application, not professional QA employment.*
+
+
+
 
