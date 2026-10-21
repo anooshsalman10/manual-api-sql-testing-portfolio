@@ -108,16 +108,33 @@
 | Actual Result | The page displayed `Thank you for your order!` and the message `Your order has been dispatched, and will arrive just as fast as the pony can get there!` Clicking Back Home returned to the Products page. |
 | Status | PASS |
 
+
+## TC-30: Verify Checkout with an Empty Cart
+
+| Field | Details |
+|---|---|
+| Test Case ID | TC-30 |
+| Scenario | Verify that a user cannot complete checkout with an empty cart |
+| Preconditions | User is logged in and the shopping cart is empty |
+| Test Steps | 1. Open the empty cart. 2. Click Checkout. 3. Enter valid first name, last name, and postal code. 4. Click Continue. 5. Verify the overview page shows no products and a $0.00 total. 6. Click Finish. |
+| Expected Result | The application should prevent the user from completing an order when the cart contains no products. |
+| Actual Result | The Checkout: Overview page displayed no products, an item total of $0, and a final total of $0.00. After clicking Finish, the application displayed the order confirmation message: "Thank you for your order!" |
+| Status | FAIL |
+| Related Bug ID | BUG-01 |
+| Notes | The behavior was reproduced twice during manual testing. See SauceDemo-Bug-Reports.md for the detailed bug report. |
+
+
+
 ---
 
 ## Test Summary
 
 | Metric | Result |
 |---|---|
-| Total Test Cases | 8 |
-| Executed | 8 |
+| Total Test Cases | 9 |
+| Executed | 9 |
 | Passed | 8 |
-| Failed | 0 |
+| Failed | 1 |
 | Blocked | 0 |
 
 ## Note
